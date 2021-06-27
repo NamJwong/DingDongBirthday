@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="226dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+
+        <ImageButton
+            android:id="@+id/buttonGoAddBirthday"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#00ff0000"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/add" />
+
+        <ImageButton
+            android:id="@+id/buttonGoSetting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#00ff0000"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/setting" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/linear1">
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/round_corner"
+            android:text="날짜별"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/round_corner_border"
+            android:text="그룹별"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/linear2">
+
+        <ImageView
+            android:layout_width="31dp"
+            android:layout_height="34dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/search" />
+
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:hint="이름 검색하기"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linear3"
+        android:textFilterEnabled="true"/>
+</RelativeLayout>
